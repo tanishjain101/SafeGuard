@@ -28,68 +28,7 @@ It helps users:
 - Tailwind CSS
 - ESLint
 
-## Project Structure
-
-```text
-SafeGuard/
-  src/
-    components/
-    services/
-    App.tsx
-    main.tsx
-  public/
-    sw.js
-  index.html
-  package.json
-```
-
-## Getting Started
-
-### 1. Install dependencies
-
-```bash
-cd /Users/tanishjain/Desktop/project/SafeGuard
-npm install
-```
-
-### 2. Run development server
-
-```bash
-npm run dev
-```
-
-The app is configured to run on:
-
-- `http://127.0.0.1:5500/`
-
-### 3. Build for production
-
-```bash
-npm run build
-```
-
-### 4. Preview production build locally
-
-```bash
-npm run preview
-```
-
 ## Important: How to Open the App Correctly
-
-Use the Vite dev server URL only.
-
-- Correct: `http://127.0.0.1:5500/`
-- Incorrect: opening `index.html` directly (`file://...`)
-- Incorrect: serving with plain static "Live Server" while expecting `/src/main.tsx` to load as TS module
-
-If opened the wrong way, browser may show:
-
-- `Failed to fetch dynamically imported module`
-- white/blank screen
-
-## Troubleshooting
-
-### White screen or startup error
 
 1. Stop old servers:
 
@@ -103,34 +42,12 @@ pkill -f "vite|live-server|python -m http.server" || true
 npm run dev
 ```
 
-3. Open exactly:
-
-- `http://127.0.0.1:5500/`
-
-4. Hard refresh browser (`Cmd+Shift+R` on macOS).
-
-### Port already in use
-
-The dev script uses `--strictPort`; it will fail instead of switching ports.
-
-- free the port or stop old process, then rerun `npm run dev`.
-
-## Available Scripts
-
-- `npm run dev` - start Vite dev server on `127.0.0.1:5500`
-- `npm run build` - production build into `dist/`
-- `npm run preview` - preview built app
-- `npm run lint` - run ESLint
-
 ## Deploying
 
 Any static hosting works (Vercel, Netlify, Firebase Hosting, GitHub Pages with proper config).
 
 Typical flow:
 
-1. `npm run build`
-2. Deploy `dist/` directory
-3. Share the hosted `https://...` URL
 
 ## Emergency Numbers (Current App Defaults)
 
